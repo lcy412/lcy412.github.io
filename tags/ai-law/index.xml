@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI Law on Chenyang‘s page</title>
-    <link>https://lcy412.github.io/tags/ai-law/</link>
+    <link>http://localhost:1313/tags/ai-law/</link>
     <description>Recent content in AI Law on Chenyang‘s page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://lcy412.github.io/tags/ai-law/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ai-law/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Law Final Review Note</title>
-      <link>https://lcy412.github.io/posts/ai_law_revision/</link>
+      <link>http://localhost:1313/posts/ai_law_revision/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/ai_law_revision/</guid>
+      <guid>http://localhost:1313/posts/ai_law_revision/</guid>
       <description>Introduction I made this material as a final review note for QMUL Module EBU5107: AI Law. It covers key points from Teaching Block3(AI and Intellectual Property) and Block4(AI and Privacy&amp;amp;Security).&#xA;Note Some parts of material are adapted from the EBU5017 lecture slides and is intended for personal study and educational use only.&#xA;Download Block3 Note.pdf</description>
     </item>
   </channel>

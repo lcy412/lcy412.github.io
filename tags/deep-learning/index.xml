@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Chenyang‘s page</title>
-    <link>https://lcy412.github.io/tags/deep-learning/</link>
+    <link>http://localhost:1313/tags/deep-learning/</link>
     <description>Recent content in Deep Learning on Chenyang‘s page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://lcy412.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MLnote1:What does it mean to sample from a distribution?</title>
-      <link>https://lcy412.github.io/posts/ml_note1/</link>
+      <link>http://localhost:1313/posts/ml_note1/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/ml_note1/</guid>
+      <guid>http://localhost:1313/posts/ml_note1/</guid>
       <description>This post was supposed to be finished and published. However, I did a bad job in Machine Learning final exam, therefore, I feel sad when I edit anything related to machine learning. So this post won&amp;rsquo;t be finished.</description>
     </item>
   </channel>

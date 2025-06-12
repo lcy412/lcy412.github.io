@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chenyang‘s page</title>
-    <link>https://lcy412.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Chenyang‘s page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://lcy412.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Law Final Review Note</title>
-      <link>https://lcy412.github.io/posts/ai_law_revision/</link>
+      <link>http://localhost:1313/posts/ai_law_revision/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/ai_law_revision/</guid>
+      <guid>http://localhost:1313/posts/ai_law_revision/</guid>
       <description>Introduction I made this material as a final review note for QMUL Module EBU5107: AI Law. It covers key points from Teaching Block3(AI and Intellectual Property) and Block4(AI and Privacy&amp;amp;Security).&#xA;Note Some parts of material are adapted from the EBU5017 lecture slides and is intended for personal study and educational use only.&#xA;Download Block3 Note.pdf</description>
     </item>
     <item>
       <title>MLnote1:What does it mean to sample from a distribution?</title>
-      <link>https://lcy412.github.io/posts/ml_note1/</link>
+      <link>http://localhost:1313/posts/ml_note1/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/ml_note1/</guid>
+      <guid>http://localhost:1313/posts/ml_note1/</guid>
       <description>This post was supposed to be finished and published. However, I did a bad job in Machine Learning final exam, therefore, I feel sad when I edit anything related to machine learning. So this post won&amp;rsquo;t be finished.</description>
     </item>
     <item>
       <title>My paper for CUMCM2024</title>
-      <link>https://lcy412.github.io/posts/cumcm/</link>
+      <link>http://localhost:1313/posts/cumcm/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/cumcm/</guid>
+      <guid>http://localhost:1313/posts/cumcm/</guid>
       <description>I participated in the 2024 China Undergraduate Mathematical Contest in Modeling(CUMCM) and won the national second prize.&#xA;Our team&amp;rsquo;s winning paper is attached here for reference.&#xA;If you want to know more about this paper and Mathematicl Modeling, you can visit the website of Haitong Lan(https://noisierier.github.io/p/my-mathematical-modeling/), one of my teammates.</description>
     </item>
     <item>
       <title>Digital Circuit Design Final Revision Tutorial</title>
-      <link>https://lcy412.github.io/posts/rea/</link>
+      <link>http://localhost:1313/posts/rea/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/rea/</guid>
+      <guid>http://localhost:1313/posts/rea/</guid>
       <description>Introduction I made this material as a final review note for QMUL Module EBU4202: Digital Circuit Design. It covers key points and some most difficult parts from Teaching Block1——Block3. Block4 is not included due to time limit.&#xA;Tutorial I hosted and ran the tutorial on June 11, 2024 from 7:30 PM to 9:30 PM to help BUPT-QMUL students review the course Digital Circuit Design. The tutorial was for students from two majors, which are Intelligence Science and Technology and Electronic Information Engineering.</description>
     </item>
   </channel>

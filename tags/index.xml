@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Chenyang‘s page</title>
-    <link>https://lcy412.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Chenyang‘s page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://lcy412.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Law</title>
-      <link>https://lcy412.github.io/tags/ai-law/</link>
+      <link>http://localhost:1313/tags/ai-law/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/ai-law/</guid>
+      <guid>http://localhost:1313/tags/ai-law/</guid>
       <description></description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>https://lcy412.github.io/tags/deep-learning/</link>
+      <link>http://localhost:1313/tags/deep-learning/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/deep-learning/</guid>
+      <guid>http://localhost:1313/tags/deep-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>https://lcy412.github.io/tags/machine-learning/</link>
+      <link>http://localhost:1313/tags/machine-learning/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/machine-learning/</guid>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Sampling</title>
-      <link>https://lcy412.github.io/tags/sampling/</link>
+      <link>http://localhost:1313/tags/sampling/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/sampling/</guid>
+      <guid>http://localhost:1313/tags/sampling/</guid>
       <description></description>
     </item>
     <item>
       <title>CUMCM</title>
-      <link>https://lcy412.github.io/tags/cumcm/</link>
+      <link>http://localhost:1313/tags/cumcm/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/cumcm/</guid>
+      <guid>http://localhost:1313/tags/cumcm/</guid>
       <description></description>
     </item>
     <item>
       <title>Mathematical Modeling</title>
-      <link>https://lcy412.github.io/tags/mathematical-modeling/</link>
+      <link>http://localhost:1313/tags/mathematical-modeling/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/mathematical-modeling/</guid>
+      <guid>http://localhost:1313/tags/mathematical-modeling/</guid>
       <description></description>
     </item>
     <item>
       <title>Digital Circuit Design</title>
-      <link>https://lcy412.github.io/tags/digital-circuit-design/</link>
+      <link>http://localhost:1313/tags/digital-circuit-design/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/tags/digital-circuit-design/</guid>
+      <guid>http://localhost:1313/tags/digital-circuit-design/</guid>
       <description></description>
     </item>
   </channel>
