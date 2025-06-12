@@ -1,0 +1,56 @@
+baseURL = 'https://lcy412.github.io/'
+languageCode = 'en-us'
+title = 'Chenyang‘s page'
+author = "Chenyang Li"
+
+theme = "saral"
+pygmentsCodefences = true
+pygmentsStyle = "doom-one"
+
+[params]
+    logoText = "Saral"
+    isBlogFocused = true
+    showHeroImage = true
+    showResumeButton = false
+    math = true
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['@@', '@@']]
+          inline = [['@', '@']]
+    
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    pre = "about"
+    url = "/about/"
+    weight = 40
+  [[menu.main]]
+    name = "Posts"
+    pre = "pen-tool"
+    url = "/posts/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 60
+
+
+
+  [module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.92.0"
+    max = "0.123.8"
