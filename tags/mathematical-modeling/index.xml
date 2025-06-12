@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematical Modeling on Chenyang‘s page</title>
-    <link>http://localhost:1313/tags/mathematical-modeling/</link>
+    <link>https://lcy412.github.io/tags/mathematical-modeling/</link>
     <description>Recent content in Mathematical Modeling on Chenyang‘s page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mathematical-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lcy412.github.io/tags/mathematical-modeling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My paper for CUMCM2024</title>
-      <link>http://localhost:1313/posts/cumcm/</link>
+      <link>https://lcy412.github.io/posts/cumcm/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cumcm/</guid>
+      <guid>https://lcy412.github.io/posts/cumcm/</guid>
       <description>I participated in the 2024 China Undergraduate Mathematical Contest in Modeling(CUMCM) and won the national second prize.&#xA;Our team&amp;rsquo;s winning paper is attached here for reference.&#xA;If you want to know more about this paper and Mathematicl Modeling, you can visit the website of Haitong Lan(https://noisierier.github.io/p/my-mathematical-modeling/), one of my teammates.</description>
     </item>
   </channel>
