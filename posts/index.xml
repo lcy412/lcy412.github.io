@@ -10,10 +10,10 @@
     <atom:link href="https://lcy412.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Mining Review Note</title>
-      <link>https://lcy412.github.io/posts/data_mining_note/</link>
+      <link>https://lcy412.github.io/posts/data-mining/</link>
       <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/data_mining_note/</guid>
-      <description>Introduction I made this material as a final review note for QMUL-BUPT Module BBU6504: Data Mining. It covers key points.&#xA;Note Some parts of material are adapted from the BBU6504 lecture slides and is intended for personal study and educational use only.&#xA;Download Block3 Note.pdf</description>
+      <guid>https://lcy412.github.io/posts/data-mining/</guid>
+      <description>Introduction This material covers key points of BBU6504: Data Mining.&#xA;Note Some parts of material are adapted from the BBU6504 lecture slides and is intended for personal study and educational use only.&#xA;Lecture1: Introuction What is Data Mining?&#xA;KDD - Knowledge discovery in database&#xA;GET unknown and potentially useful information from data&#xA;Exploration &amp;amp; analysis, by automatic or semi-automatic means, of large quantities of data in order to discover&#xA;Attribute Type Ordered Differences Meaningful True Zero Ratios Valid Nominal No No No No Ordinal Yes No No No Interval Yes Yes No No Ratio Yes Yes Yes Yes Noise For objects, noise is an extraneous object For attributes, noise refers to modification of original values</description>
     </item>
     <item>
       <title>Machine Leaning Final Revision Tutorial</title>

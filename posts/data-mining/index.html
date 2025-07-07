@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  Data Mining Review Note | Chenyang‘s page
+</title>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['@@', '@@']],  
+      inlineMath: [['@', '@']]                  
+    }
+  };
+</script>
+
+
+    
+  </head>
+  <body>
+    <header>
+<nav class="navbar">
+  <a href="/">
+    
+    <p class="logo">Saral</p>
+  </a>
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+
+    <li>
+      <a href="/">Home</a>
+    </li>
+
+    <li>
+      <a href="/posts/">Posts</a>
+    </li>
+
+    <li>
+      <a href="/about/">About</a>
+    </li>
+
+    <li>
+      <a href="/contact/">Contact</a>
+    </li>
+  
+      <li><button id="mode-toggle">☀️</button></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+    
+
+<main class="main-content">
+   <section class="meta-heading">
+  <h1>Data Mining Review Note</h1>
+  <span>
+     
+<div class="post-tags">
+  <div>
+    
+    <span>
+      <a href="/tags/data-mining/">Data Mining</a>
+    </span>
+  </div>
+</div>
+
+  </span>
+</section>
+
+  <section class="post">
+    <h1 id="introduction">Introduction</h1>
+<p>This material covers key points of <em><strong>BBU6504: Data Mining</strong></em>.</p>
+<h1 id="note">Note</h1>
+<p>Some parts of material are adapted from the <strong>BBU6504 lecture slides</strong> and is intended for <strong>personal study and educational use only</strong>.</p>
+<h1 id="lecture1-introuction">Lecture1: Introuction</h1>
+<p><strong>What is Data Mining?</strong></p>
+<p>KDD - Knowledge discovery in database</p>
+<ol>
+<li>
+<p>GET unknown and potentially useful information from data</p>
+</li>
+<li>
+<p>Exploration &amp; analysis, by automatic or semi-automatic means, of large quantities of data in order to discover</p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_D4D66C50C7C2-1.jpeg" alt="IMG_D4D66C50C7C2-1.jpeg"></p>
+</li>
+</ol>
+<h3 id="attribute">Attribute</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Ordered</strong></th>
+<th><strong>Differences Meaningful</strong></th>
+<th><strong>True Zero</strong></th>
+<th><strong>Ratios Valid</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nominal</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Ordinal</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Interval</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Ratio</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="noise">Noise</h3>
+<p>For objects, noise is an extraneous object
+For attributes, noise refers to modification of original values</p>
+<h3 id="outliers">Outliers</h3>
+<p><em><strong>Outliers</strong></em> are data objects with characteristics that are considerably different than most of the other data objects in the data set.</p>
+<ul>
+<li><strong>Case 1:</strong> Outliers are noise that interferes with data analysis</li>
+<li><strong>Case 2:</strong> Outliers are the goal of our analysis</li>
+</ul>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_3CE51D76A85A-1.jpeg" alt="IMG_3CE51D76A85A-1.jpeg"></p>
+<h3 id="duplicate-data"><strong>Duplicate Data</strong></h3>
+<p>Duplicate data refers to records that are exactly or nearly identical.</p>
+<p><strong>Cause: It’s common when merging datasets from heterogeneous sources.</strong></p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Same person appearing multiple times with different height values.</li>
+</ul>
+<p><strong>How to Handle:</strong></p>
+<ul>
+<li><strong>Remove</strong> exact duplicates.</li>
+<li><strong>Merge</strong> similar records.</li>
+<li><strong>Resolve</strong> conflicting values (e.g., take average or most recent).</li>
+</ul>
+<p><strong>Data cleaning: Process of dealing with duplicate data issues</strong></p>
+<p><strong>When Not to Remove:</strong></p>
+<ul>
+<li>When duplicates represent real events (e.g., <strong>Transactional context</strong>).</li>
+<li>When frequency matters (e.g., in pattern mining).</li>
+</ul>
+<h1 id="lecture2-quality-preprocessing-and-measures">Lecture2 Quality, Preprocessing, and Measures</h1>
+<h2 id="preprocessing">Preprocessing</h2>
+<h3 id="aggregation">Aggregation</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image.png" alt="image.png"></p>
+<h3 id="sampling">Sampling</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_E1B97431D974-1.jpeg" alt="IMG_E1B97431D974-1.jpeg"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%201.png" alt="image.png"></p>
+<h3 id="curse-of-dimensionality">Curse of Dimensionality</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%202.png" alt="image.png"></p>
+<p><strong>1.数据变稀疏</strong></p>
+<p>高维空间里，大多数数据点之间的距离都变得“差不多远”，密度差异变得不明显，这会导致很多算法（特别是依赖“距离”的算法，比如KNN、聚类）难以判断哪些点是“相近”的。</p>
+<p><strong>2.样本不够代表性</strong></p>
+<p>在高维空间中，可能需要<strong>指数级更多的样本</strong>才能覆盖整个空间。我们手头的数据，很可能根本不具代表性，训练出的模型泛化能力差。</p>
+<p><strong>3.分类器效果变差</strong></p>
+<p>对于分类任务，维度太高可能导致：</p>
+<ul>
+<li>模型难以覆盖所有可能的“输入组合”</li>
+<li>训练数据不足，模型容易<strong>过拟合</strong></li>
+</ul>
+<p><strong>4.聚类质量下降</strong></p>
+<p>聚类依赖于“点与点之间的距离”来划分簇，但在高维中距离变得没意义，导致聚类结构模糊，效果差。</p>
+<p><strong>1. Dimensionality Reduction</strong></p>
+<p><strong>Goal</strong>: Transform data into a lower-dimensional space while preserving as much useful information as possible.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Avoids the curse of dimensionality</li>
+<li>Reduces time and memory consumption</li>
+<li>Makes data easier to visualize</li>
+<li>Helps remove noise and irrelevant patterns</li>
+</ul>
+<p><strong>Techniques</strong>:</p>
+<ul>
+<li><strong>PCA (Principal Component Analysis)</strong>: Projects data into components that capture the most variance</li>
+<li><strong>SVD (Singular Value Decomposition)</strong>: Matrix factorization to extract latent structure</li>
+<li><strong>Other methods</strong>: t-SNE, autoencoders, LDA (depending on the task)</li>
+</ul>
+<hr>
+<p><strong>2. Feature Subset Selection</strong></p>
+<p><strong>Goal</strong>: Select a subset of the most relevant features instead of transforming them.</p>
+<p><strong>Types of Features to Remove</strong>:</p>
+<ul>
+<li><strong>Redundant features</strong>: Overlap with others in information (e.g., price and sales tax)</li>
+<li><strong>Irrelevant features</strong>: Unrelated to the task (e.g., student ID when predicting GPA)</li>
+</ul>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Improves model performance and interpretability</li>
+<li>Speeds up training</li>
+<li>Reduces risk of overfitting</li>
+</ul>
+<h3 id="binarization">Binarization</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_15D9D128DF72-1.jpeg" alt="IMG_15D9D128DF72-1.jpeg"></p>
+<h3 id="attribute-transformation">Attribute Transformation</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_44A608052579-1.jpeg" alt="IMG_44A608052579-1.jpeg"></p>
+<h3 id="missing-values">Missing Values</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%203.png" alt="image.png"></p>
+<table>
+<thead>
+<tr>
+<th>Continuous</th>
+<th>Use <strong>mean</strong>, <strong>median</strong>, or <strong>average of nearest neighbors</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categorical</td>
+<td>Use <strong>mode</strong>, <strong>most frequent among nearest neighbors</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="similarity-measures">Similarity Measures</h2>
+<h3 id="minkowski-distance">Minkowski Distance</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%204.png" alt="image.png"></p>
+<h3 id="smc-and-jaccard">SMC and Jaccard</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%205.png" alt="image.png"></p>
+<h3 id="cosine-similarity">Cosine Similarity</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%206.png" alt="image.png"></p>
+<h2 id="correlation">Correlation</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%207.png" alt="image.png"></p>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>类型</strong></th>
+<th><strong>适用数据</strong></th>
+<th><strong>关注重点</strong></th>
+<th><strong>推荐场景</strong></th>
+<th><strong>不适合</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Euclidean Distance</strong>欧几里得距离</td>
+<td>距离</td>
+<td>数值型（连续）</td>
+<td><strong>值的大小差异</strong></td>
+<td>聚类（如K-means）、低维连续数据</td>
+<td>不适合高维稀疏数据</td>
+</tr>
+<tr>
+<td><strong>Cosine Similarity</strong>余弦相似度</td>
+<td>相似度</td>
+<td>数值型（稀疏向量）</td>
+<td><strong>方向/比例结构</strong>（忽略大小）</td>
+<td>文本向量、用户兴趣、TF-IDF</td>
+<td>不适合需要关注绝对大小的任务</td>
+</tr>
+<tr>
+<td><strong>Correlation</strong>相关系数</td>
+<td>相似度</td>
+<td>数值型</td>
+<td><strong>变量间变化趋势</strong>（线性关系）</td>
+<td>时间序列趋势比较、评分模式对比</td>
+<td>忽略绝对值，不适合关注“量”的场景</td>
+</tr>
+<tr>
+<td><strong>SMC</strong>Simple Matching Coefficient</td>
+<td>相似度</td>
+<td>二值型（对称）</td>
+<td><strong>0 和 1 匹配都重要</strong></td>
+<td>投票、性别、偏好</td>
+<td>不适合稀疏的行为数据（多数是0）</td>
+</tr>
+<tr>
+<td><strong>Jaccard Similarity</strong></td>
+<td>相似度</td>
+<td>二值型（非对称）</td>
+<td><strong>1 的共现匹配</strong>，忽略 0</td>
+<td>医疗记录、用户行为、标签数据</td>
+<td>特征密集时不敏感，不能用于对称0-1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="clustering">Clustering</h1>
+<ol>
+<li>Well-separated</li>
+<li>Prototype-based</li>
+<li>Density-based</li>
+</ol>
+<p>OR</p>
+<ol>
+<li>Hierarchical</li>
+<li>Partitional</li>
+<li>Density-based</li>
+</ol>
+<h2 id="k-means">K-means</h2>
+<p>K-means has problems when clusters are of differing Sizes,Densities</p>
+<p>Non-globular shapes</p>
+<p>K-means has problems when the data contains outliers.</p>
+<h2 id="dbscan">DBSCAN</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%208.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%209.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2010.png" alt="image.png"></p>
+<h2 id="diana">Diana</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2011.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2012.png" alt="image.png"></p>
+<h2 id="agglomerative-hierarchical-clustering">Agglomerative Hierarchical Clustering</h2>
+<h3 id="advantages-and-disadvantages-of-linkage"><strong>Advantages and Disadvantages of Linkage</strong></h3>
+<p><strong>1. MIN (Single Linkage)</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Can handle clusters with non-elliptical shapes (e.g., elongated or curved).</li>
+<li>Simple to compute, only considers the shortest distance between clusters.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Prone to the <em>chaining effect</em>, where loosely related points form long chains.</li>
+<li>Highly sensitive to noise and outliers, which can act as bridges between clusters.</li>
+</ul>
+<hr>
+<p><strong>2. MAX (Complete Linkage)</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>More robust to noise and outliers, as it uses the farthest points to determine proximity.</li>
+<li>Tends to produce compact and well-separated clusters.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>May fail to merge naturally connected but irregularly shaped clusters.</li>
+<li>Sensitive to cluster density differences; sparse clusters may be split unnecessarily.</li>
+</ul>
+<hr>
+<p><strong>3. Group Average Linkage</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Balances between Single and Complete Link methods.</li>
+<li>Less sensitive to noise and avoids chaining effect.</li>
+<li>Can handle complex and non-spherical cluster shapes effectively.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Higher computational cost due to averaging all point pairs between clusters.</li>
+<li>Sensitive to differences in cluster size and density, which may distort proximity values.</li>
+</ul>
+<hr>
+<blockquote>
+<p>Problems and Limitations</p>
+</blockquote>
+<ul>
+<li>
+<p>Once a decision is made to combine two clusters, it cannot be undone</p>
+</li>
+<li>
+<p>No global objective function is directly minimized</p>
+</li>
+<li>
+<p>Different schemes have problems with one or more of the following:</p>
+<blockquote>
+<p>– Sensitivity to noise and outliers</p>
+</blockquote>
+<blockquote>
+<p>– If the splitting point is not selected at a certain step, it may result in low-quality clustering results.</p>
+</blockquote>
+<blockquote>
+<p>– Big data sets don’t break very well.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Q: How to overcome the limitation that “movement is the ultimate” in hierarchical clustering?</strong></p>
+<p>This limitation means that once two clusters are merged, the decision cannot be undone. To overcome this:</p>
+<ol>
+<li>
+<p><strong>Post-processing by moving branches in the dendrogram</strong>:</p>
+<p>After constructing the initial hierarchy, the structure of the dendrogram can be refined by moving subtrees (branches) to new positions to better optimize a global objective function (e.g., minimizing overall variance or improving silhouette score). This allows corrections to be made to earlier poor merging decisions.</p>
+</li>
+<li>
+<p><strong>Hybrid approach using partitional clustering first</strong>:</p>
+<p>Another method is to first use a partitional algorithm like K-means to divide the data into many small, dense clusters. Then, hierarchical clustering is applied to these clusters instead of individual data points. This reduces the impact of noise and prevents early incorrect merges, leading to a more robust hierarchy.</p>
+</li>
+</ol>
+<h2 id="advanced-cluster-analysis">Advanced Cluster Analysis</h2>
+<h2 id="silhouette">Silhouette</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2013.png" alt="image.png"></p>
+<p><strong>Cluster 1 contains {P1, P2}, Cluster 2 contains {P3, P4}. The dissimilarity matrix that we obtain from the similarity matrix is the following:</strong></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2014.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2015.png" alt="image.png"></p>
+<h1 id="decision-tree">Decision Tree</h1>
+<h2 id="confusion-matrix">Confusion Matrix</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2016.png" alt="image.png"></p>
+<h2 id="impurity-calculation--will-be-asessed">Impurity Calculation （ Will be asessed)</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2017.png" alt="image.png"></p>
+<h3 id="gini-gain">Gini gain</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2018.png" alt="image.png"></p>
+<h3 id="gain-ratio">Gain ratio</h3>
+<p><strong>Node impurity measures tend to prefer splits that result in large number of partitions, each being small but pure.</strong></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2019.png" alt="image.png"></p>
+<h2 id="finding-the-best-split-for-continuous-attributes"><strong>Finding The Best Split for Continuous Attributes</strong></h2>
+<p>For efficient computation o(nlogn) compared to brute-force(N^2):</p>
+<ul>
+<li>– Sort the attribute based on their values</li>
+<li>– Calculate the midpoints between two adjacent sorted values</li>
+<li>– Linearly scan these midpoints, each time updating the count
+matrix and computing Gini index</li>
+<li>– Choose the split position that has the least Gini index</li>
+</ul>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2020.png" alt="image.png"></p>
+<h2 id="pros--cons">Pros &amp; Cons</h2>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>– Inexpensive to construct</li>
+<li>– Extremely fast at classifying unknown records</li>
+<li>– Easy to interpret for small-sized trees</li>
+<li>– Robust to noise(especially when methods to avoid
+overfitting are employed)</li>
+<li>– Can easily handle redundant or irrelevant attributes(unless
+the attributes are interacting)</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>– Space of possible decision trees is exponentially large.
+Greedy approaches are often unable to find the best
+tree.NP-hard.</li>
+<li>– Handling Redundant Attributes:An attribute is redundantif
+it is strongly correlated with another attribute in the data.
+Since redundant attributes show similar gains in purity if
+they are selected for splitting, only one of them will be
+selected as an attribute test condition in the decision tree
+algorithm. Decision trees can thus handle the presence of
+redundant attributes.</li>
+<li>– Using Rectilinear Splits:The test conditions described so
+far in this chapter involve using only a single attribute at a
+time.</li>
+</ul>
+<p><strong>Q: Why would we choose Naive Bayes instead of decision trees in some scenarios?</strong></p>
+<p>In certain scenarios, Naive Bayes is preferred over decision trees for the following reasons:</p>
+<ol>
+<li>
+<p><strong>High-dimensional data</strong>: Naive Bayes performs well with high-dimensional data, such as text classification, where each word is a feature. It remains effective even with a small number of training examples.In contrast, decision trees are prone to overfitting in such cases.</p>
+</li>
+<li>
+<p><strong>Faster training and prediction</strong>: Naive Bayes is computationally efficient because it only requires calculating probabilities. Decision trees need to search for optimal splits, which is more time-consuming.</p>
+</li>
+<li>
+<p><strong>Better performance with independent features</strong>: If features are mostly conditionally independent, Naive Bayes can be highly accurate. Decision trees may overfit when feature interactions are weak or noisy.</p>
+</li>
+<li>
+<p><strong>Robust to noise and missing data</strong>: Naive Bayes handles noisy and missing data gracefully, while decision trees can be sensitive and may produce overly complex models.</p>
+</li>
+<li>
+<p><strong>Small dataset</strong>:</p>
+<p>Naive Bayes requires less data to estimate parameters, making it more suitable when training data is limited. Decision trees often need more data to build stable and generalizable models.</p>
+</li>
+<li>
+<p><strong>Flexible decision boundaries</strong>:</p>
+<p>Decision trees can only form <strong>rectilinear (axis-aligned)</strong> boundaries, limiting their ability to model complex or diagonal class separations. Naive Bayes, especially with Gaussian distributions, can create <strong>elliptical or non-linear</strong> decision boundaries.</p>
+</li>
+</ol>
+<h1 id="classification-evaluation">Classification-Evaluation</h1>
+<h2 id="overfitting-and-underfitting">Overfitting and Underfitting</h2>
+<p>What is overfitting and underfitting?</p>
+<h2 id="optimistic-and-pessimistic">Optimistic and Pessimistic</h2>
+<ol>
+<li>Optimistic: Training error → generalisation error</li>
+<li>pessimistic :</li>
+</ol>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2021.png" alt="image.png"></p>
+<h2 id="mdl">MDL</h2>
+<p>The model is encoded in compressed form before being passed to B. The cost of transmission is equal to the cost
+of model coding.</p>
+<p><strong>The total cost of transmission is:</strong></p>
+<p>$Cost(Model,Data) = Cost(Data|Model) + Cost(Model)$</p>
+<p><strong>Cost(Data|Model) :encodes the misclassification errors.</strong></p>
+<p><strong>Cost(Model) :Model coding overhead</strong></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_FB50D1BD7F40-1.jpeg" alt="IMG_FB50D1BD7F40-1.jpeg"></p>
+<p><strong>So the total cost should be:</strong></p>
+<p>$Cost(Model,Data)=N(Error) \times log_2n + N(Internal)\times log_2m + N(Leaf)\times Log_2k$</p>
+<p><strong>where n is the number of training instances, m is the number of attributes and k is the number of classes</strong></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2022.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2023.png" alt="image.png"></p>
+<h2 id="handling-overfiting">Handling Overfiting</h2>
+<h3 id="pre-pruning">Pre-pruning</h3>
+<p>Stop the algorithm before it becomes a fully-grown tree</p>
+<ol>
+<li>
+<p><strong>Stop if all instances belong to the same class</strong></p>
+</li>
+<li>
+<p>**Stop if all the attribute values are the same</p>
+</li>
+</ol>
+<p>More restrictive conditions:**</p>
+<ol>
+<li>Stop if number of instances is less than some
+user- specified threshold</li>
+<li>Stop if expanding the current node does not improve
+impurity measures (e.g., Gini or information gain).</li>
+<li>Stop if estimated generalization error falls below
+certain threshold</li>
+</ol>
+<h3 id="pose-pruning">Pose-pruning</h3>
+<p><strong>Subtree replacement</strong></p>
+<ol>
+<li>If generalisation error improves after trimming, replace sub-tree by a leaf node</li>
+<li>Class label of leaf node is determined from majority class of instances in the sub-tree.</li>
+</ol>
+<p><strong>Subtree raising</strong></p>
+<ol>
+<li>Replace subtree with most frequently used branch</li>
+</ol>
+<p><strong>Post-pruning tends to produce better results than pre-pruning, because unlike pre-pruning, post-pruning is a pruning decision based on a fully-growth decision tree. Pre-Pruning may
+terminate the growth of the decision tree too early. However, for post-pruning, when the
+subtree is cut off. The overhead of growing a complete decision tree is wasted</strong></p>
+<h1 id="81-alternative-classification-techniques"><strong>8.1 Alternative Classification Techniques</strong></h1>
+<h2 id="rule-based-classifier">Rule-based Classifier</h2>
+<h3 id="rule-coverage-and-accuracy"><strong>Rule coverage and accuracy</strong></h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_8BF01670A94D-1.jpeg" alt="IMG_8BF01670A94D-1.jpeg"></p>
+<h3 id="rule-evaluation"><strong>Rule Evaluation</strong></h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_9ECBD94DE1F1-1.jpeg" alt="IMG_9ECBD94DE1F1-1.jpeg"></p>
+<hr>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2024.png" alt="image.png"></p>
+<h3 id="direct-method-ripper">Direct Method-RIPPER</h3>
+<p><strong>RIPPER (Repeated Incremental Pruning to Produce Error Reduction)</strong> is a rule-based classification algorithm designed to efficiently generate a set of interpretable rules, especially for large datasets. It follows a direct rule-learning approach through sequential covering, pruning, and MDL-based stopping criteria.</p>
+<hr>
+<h3 id="handling-class-labels"><strong>Handling Class Labels</strong></h3>
+<ul>
+<li><strong>Two-class problems</strong>:
+<ul>
+<li>Choose the class with <strong>lower prevalence</strong> (fewer instances) as the <strong>positive class</strong>.</li>
+<li>The other becomes the <strong>default (negative) class</strong>, which is implicitly predicted when no rules match.</li>
+</ul>
+</li>
+<li><strong>Multi-class problems</strong>:
+<ul>
+<li>Sort all classes in <strong>increasing order of prevalence</strong>.</li>
+<li>Learn rules for the <strong>smallest class</strong> first, treating all others as negative.</li>
+<li>Repeat the process for the next smallest class, and so on.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="growing-a-rule"><strong>Growing a Rule</strong></h3>
+<ul>
+<li>Begin with an <strong>empty rule</strong>.</li>
+<li><strong>Add conditions (conjuncts)</strong> incrementally to the rule <strong>as long as they increase FOIL’s information gain</strong>.</li>
+<li><strong>Stop adding conditions</strong> when the rule starts covering negative examples.</li>
+<li><strong>Prune</strong> the rule using a validation-based strategy:
+<ul>
+<li>
+<p>Use the metric:</p>
+<p>$$
+v = \frac{p - n}{p + n}
+$$</p>
+<p>where:</p>
+<ul>
+<li>p: number of positive instances covered in the validation set</li>
+<li>n: number of negative instances covered in the validation set</li>
+</ul>
+</li>
+<li>
+<p>Remove any <strong>final sequence of conditions</strong> that maximizes v.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="building-a-rule-set"><strong>Building a Rule Set</strong></h3>
+<ul>
+<li>Use a <strong>sequential covering</strong> approach:
+<ul>
+<li>Repeatedly find the best rule to cover the remaining positive examples.</li>
+<li>Remove all examples (both positive and negative) covered by the rule.</li>
+</ul>
+</li>
+<li>After each rule is added, <strong>compute the total description length</strong>.</li>
+<li><strong>Stop adding rules</strong> when the new rule set is <strong>d bits longer</strong> than the smallest description length found so far.
+<ul>
+<li>Default threshold: d = 64</li>
+</ul>
+</li>
+</ul>
+<h3 id="indirect-method-c45">Indirect Method-C4.5</h3>
+<p>C4.5rules is an indirect rule-based classification method derived from the C4.5 decision tree algorithm. Instead of building rules directly from data, it extracts and simplifies rules from an <strong>unpruned decision tree</strong>, and then organizes them using the <strong>minimum description length (MDL) principle</strong>.</p>
+<hr>
+<h3 id="-rule-extraction-and-simplification"><strong>🔹 Rule Extraction and Simplification</strong></h3>
+<ul>
+<li>
+<p>Start by <strong>extracting rules from an unpruned decision tree</strong>.</p>
+</li>
+<li>
+<p>Each rule takes the form:</p>
+<p>A → y, where A is a conjunction of conditions (e.g., attribute tests), and y is a class label.</p>
+</li>
+<li>
+<p>To <strong>simplify a rule</strong>, iteratively remove one condition (conjunct) to create a shorter version A′ → y.</p>
+</li>
+<li>
+<p>For each simplified version:</p>
+<ul>
+<li>Compute the <strong>pessimistic error estimate</strong>.</li>
+<li>Retain the rule with the <strong>lowest pessimistic error</strong>, as long as its error is not worse than the original.</li>
+</ul>
+</li>
+<li>
+<p>Repeat until no further improvement is possible.</p>
+</li>
+</ul>
+<hr>
+<h3 id="-pessimistic-error-estimate"><strong>🔹 Pessimistic Error Estimate</strong></h3>
+<p>To avoid overfitting, C4.5 uses a pessimistic estimate of a rule/tree’s error:</p>
+<p>$e_g(T) = \frac{e(T) + l(T)}{N_t}$</p>
+<p>Where:</p>
+<ul>
+<li>e(T): number of training errors in the tree</li>
+<li>l(T): penalty term (e.g., one per leaf node)</li>
+<li>$N_t$: total number of training samples</li>
+</ul>
+<p>This formula penalizes complex models and favors generalization.</p>
+<hr>
+<h3 id="-class-based-rule-set-organization"><strong>🔹 Class-Based Rule Set Organization</strong></h3>
+<p>Instead of ordering rules linearly, C4.5rules <strong>orders subsets of rules grouped by class label</strong>. Each class has its own rule subset.</p>
+<p>For each class subset:</p>
+<ul>
+<li>Compute its <strong>description length</strong>:</li>
+</ul>
+<p>$\text{Description Length} = L(\text{error}) + g \cdot L(\text{model})$</p>
+<p>Where:</p>
+<ul>
+<li>$L(\text{error})$: bits needed to encode misclassified examples</li>
+<li>$L(\text{model})$: bits needed to encode the rule model</li>
+<li>g: regularization parameter (default = 0.5), penalizes redundant attributes</li>
+</ul>
+<p>Finally, <strong>order the classes by increasing total description length</strong>, prioritizing the most compact and accurate rule sets.</p>
+<hr>
+<h3 id="-c45rules-vs-ripper--rule-comparison-example"><strong>🔹 C4.5rules vs RIPPER – Rule Comparison Example</strong></h3>
+<p>Given a dataset of animals with features like “Give Birth”, “Can Fly”, “Live in Water”, etc., both algorithms generate rule sets for classification.</p>
+<p><strong>C4.5rules:</strong></p>
+<ul>
+<li>Extracted from decision tree paths</li>
+<li>Rule conditions follow attribute hierarchy</li>
+<li>Example rules:
+<ul>
+<li>(Give Birth = No, Can Fly = Yes) → Birds</li>
+<li>(Give Birth = Yes) → Mammals</li>
+<li>(Give Birth = No, Can Fly = No, Live in Water = No) → Reptiles</li>
+</ul>
+</li>
+</ul>
+<p><strong>RIPPER:</strong></p>
+<ul>
+<li>
+<p>Grows rules directly from data using greedy heuristics (e.g., FOIL’s info gain)</p>
+</li>
+<li>
+<p>Rules are more compact, with separate handling for default class</p>
+</li>
+<li>
+<p>Example rules:</p>
+<ul>
+<li>(Live in Water = Yes) → Fishes</li>
+<li>(Have Legs = No) → Reptiles</li>
+<li>(Can Fly = Yes, Give Birth = No) → Birds</li>
+<li>Default → Mammals</li>
+</ul>
+<p>Naive Baye</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>C4.5rules</strong></th>
+<th><strong>RIPPER</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method Type</td>
+<td>Indirect (tree-based)</td>
+<td>Direct (rule growing)</td>
+</tr>
+<tr>
+<td>Rule Source</td>
+<td>Decision tree paths</td>
+<td>Data-driven search</td>
+</tr>
+<tr>
+<td>Rule Simplification</td>
+<td>Pessimistic error pruning</td>
+<td>Post-pruning with FOIL gain</td>
+</tr>
+<tr>
+<td>Class Handling</td>
+<td>Class-based subsets (ordered by MDL)</td>
+<td>Class-wise sequential covering</td>
+</tr>
+<tr>
+<td>Default Class</td>
+<td>Explicit rules</td>
+<td>Implicit (default class at end)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="knn-know">KNN （know)</h2>
+<h2 id="bayes-classifier">Bayes Classifier</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_E8D574F7544B-1.jpeg" alt="IMG_E8D574F7544B-1.jpeg"></p>
+<hr>
+<h3 id="estimate-probabilities-from-data"><strong>Estimate Probabilities from Data</strong></h3>
+<p>In Naïve Bayes classification, we need to estimate the conditional probability of attributes given a class:</p>
+<p>$P(X_i \mid Y_j)$</p>
+<p>For <strong>continuous attributes</strong>, there are two main strategies:</p>
+<hr>
+<h3 id="1-discretization"><strong>1. Discretization</strong></h3>
+<ul>
+<li>Convert continuous attributes into categorical (ordinal) bins.</li>
+<li>Replace each value with its corresponding bin label.</li>
+<li>This changes the attribute from continuous to ordinal.</li>
+<li>Pros: simple to implement</li>
+<li>Cons: may lose precision and introduce arbitrary thresholds</li>
+</ul>
+<hr>
+<h3 id="2-probability-density-estimation"><strong>2. Probability Density Estimation</strong></h3>
+<ul>
+<li>Assume that the attribute values follow a <strong>normal (Gaussian) distribution</strong> for each class.</li>
+<li>Estimate the <strong>mean (μ)</strong> and <strong>variance (σ²)</strong> for each attribute–class pair using the training data.</li>
+<li>Use the <strong>Gaussian probability density function</strong> to compute conditional probability:</li>
+</ul>
+<p>$P(X_i = x \mid Y_j) = \frac{1}{\sqrt{2\pi \sigma_{ij}^2}} \cdot e^{-\frac{(x - \mu_{ij})^2}{2 \sigma_{ij}^2}}$</p>
+<hr>
+<h3 id="example"><strong>Example</strong></h3>
+<p>Suppose we have a dataset with the attribute “Taxable Income” and class “Evade = No”:</p>
+<ul>
+<li>
+<p>Mean income (for Class = No): μ = 110</p>
+</li>
+<li>
+<p>Variance: σ² = 2975 → σ ≈ 54.54</p>
+</li>
+<li>
+<p>We want to compute:</p>
+<p>$P(Income = 120 \mid No)
+= \frac{1}{\sqrt{2\pi \cdot 2975}} \cdot e^{- \frac{(120 - 110)^2}{2 \cdot 2975}} ≈ 0.0072$</p>
+</li>
+</ul>
+<hr>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2025.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2026.png" alt="image.png"></p>
+<h1 id="8-2-artificial-neural-networks">8-2 Artificial Neural Networks</h1>
+<h2 id="ann">ANN</h2>
+<p>An Artificial Neural Network (ANN) is a machine learning model inspired by the structure of the human brain. It is composed of layers of interconnected nodes (neurons) that learn to map inputs to outputs through training.</p>
+<h3 id="structure-of-ann"><strong>Structure of ANN</strong></h3>
+<ul>
+<li><strong>Input Layer</strong>: Receives raw features (e.g., pixel values, numeric inputs).</li>
+<li><strong>Hidden Layers</strong>: One or more layers that apply weights, biases, and activation functions to capture patterns in the data.</li>
+<li><strong>Output Layer</strong>: Produces the final prediction (e.g., class label or probability).</li>
+</ul>
+<hr>
+<h3 id="how-ann-learns"><strong>How ANN Learns</strong></h3>
+<ol>
+<li><strong>Forward Propagation</strong>: Inputs pass through the network to generate an output.</li>
+<li><strong>Loss Computation</strong>: Measures how far the prediction is from the true label.</li>
+<li><strong>Backpropagation</strong>: Computes gradients of the loss with respect to weights.</li>
+<li><strong>Parameter Update</strong>: Uses gradient descent to adjust weights and reduce the loss.</li>
+</ol>
+<h2 id="back-propagation">Back-propagation</h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2027.png" alt="image.png"></p>
+<p>In backpropagation, we start at the output layer, calculate the error terms for each neuron layer by layer (that is, the
+derivative of the loss function with respect to the activation value of that layer), and then use these error terms and the
+activation value of the previous layer to calculate the gradient of the weight of the current layer.</p>
+<h1 id="8-3-svm">8-3 SVM</h1>
+<p>Find hyperplane maximizes the margin.</p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2028.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2029.png" alt="image.png"></p>
+<hr>
+<h3 id="learning-nonlinear-svm-the-kernel-trick"><strong>Learning Nonlinear SVM: The Kernel Trick</strong></h3>
+<p>Support Vector Machines (SVMs) are originally designed for linear classification. To handle nonlinear data, we use the <strong>Kernel Trick</strong> — a powerful method to implicitly map input data to a higher-dimensional space without actually performing the transformation.</p>
+<hr>
+<h3 id="core-idea-kernel-trick"><strong>Core Idea: Kernel Trick</strong></h3>
+<blockquote>
+<p>Instead of explicitly mapping input x to a high-dimensional space \phi(x), we compute the inner product in that space using a kernel function:</p>
+</blockquote>
+<p>$\phi(x_i) \cdot \phi(x_j) = K(x_i, x_j)$</p>
+<ul>
+<li>$\phi(x)$: Mapping to higher-dimensional space</li>
+<li>$K(x_i, x_j)$: Kernel function, computed in the original space</li>
+<li><strong>No need to compute</strong> $\phi(x)$ <strong>explicitly!</strong></li>
+</ul>
+<hr>
+<h3 id="what-is-a-kernel-function"><strong>What Is a Kernel Function?</strong></h3>
+<p>A <strong>kernel function</strong> is defined in the original input space and returns the dot product of the corresponding mapped vectors in a high-dimensional feature space.</p>
+<hr>
+<h3 id="common-kernel-functions"><strong>Common Kernel Functions:</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Kernel Type</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polynomial Kernel</td>
+<td>$$K(x, y) = (x \cdot y + 1)^p$$</td>
+<td></td>
+</tr>
+<tr>
+<td>Captures polynomial interactions</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gaussian (RBF)</td>
+<td>$$ K(x, y) = e^{- \frac{</td>
+<td></td>
+</tr>
+<tr>
+<td>Sigmoid Kernel</td>
+<td>$K(x, y) = \tanh(kx \cdot y - \delta)$</td>
+<td>Inspired by neural activation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="why-it-matters"><strong>Why It Matters</strong></h3>
+<ul>
+<li>Avoids expensive computation in high-dimensional space</li>
+<li>Enables SVM to find nonlinear decision boundaries</li>
+<li>Makes SVM extremely flexible for complex datasets：</li>
+</ul>
+<hr>
+<h3 id="kernel-functions-advantages-and-validity-conditions"><strong>Kernel Functions: Advantages and Validity Conditions</strong></h3>
+<h3 id="advantages-of-using-kernel-functions"><strong>Advantages of Using Kernel Functions</strong></h3>
+<p>Kernel functions are central to nonlinear SVMs, allowing computations in high-dimensional spaces without explicitly mapping the data:</p>
+<ul>
+<li>You do <strong>not need to know the mapping function</strong> φ. The kernel trick computes the inner product in high-dimensional space implicitly.</li>
+<li><strong>Computing φ(xᵢ) • φ(xⱼ) in the original space</strong> helps avoid the curse of dimensionality, which occurs when data is explicitly mapped to high-dimensional spaces.</li>
+</ul>
+<p>This makes SVMs with kernel functions computationally efficient while still allowing flexible decision boundaries.</p>
+<hr>
+<h3 id="not-all-functions-are-valid-kernels"><strong>Not All Functions Are Valid Kernels</strong></h3>
+<p>A valid kernel must correspond to an inner product in some feature space. Arbitrary functions may not satisfy the mathematical properties required to be used as kernels.</p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_A8A53F0A7565-1.jpeg" alt="IMG_A8A53F0A7565-1.jpeg"></p>
+<h3 id="support-vectors">Support vectors</h3>
+<p>In Support Vector Machines (SVM), <strong>support vectors</strong> are the <strong>data samples that lie closest to the decision boundary (the separating hyperplane)</strong>. These are the critical points that directly influence the position and orientation of the hyperplane.</p>
+<p><strong>What Are Support Vectors?</strong></p>
+<ul>
+<li>
+<p>They are the data points from each class that <strong>lie on the margin boundaries</strong>.</p>
+</li>
+<li>
+<p>In the <strong>canonical form</strong> of SVM, they satisfy:</p>
+<p>$\vec{w} \cdot \vec{x}_i + b = \pm1$</p>
+</li>
+<li>
+<p>All other data points <strong>do not affect the final decision boundary</strong>—only the support vectors do.</p>
+</li>
+</ul>
+<hr>
+<p><strong>What Do They Do?</strong></p>
+<ul>
+<li><strong>Define the margin</strong>: The distance between the support vectors and the hyperplane is the <strong>margin</strong>. SVM maximizes this margin.</li>
+<li><strong>Determine the hyperplane</strong>: If you remove non-support vectors, the hyperplane stays the same. If you remove support vectors, the hyperplane <strong>changes</strong>.</li>
+<li><strong>Control generalization</strong>: The fewer support vectors used, the better the model may generalize (less overfitting).</li>
+</ul>
+<h1 id="association-analysis">Association Analysis</h1>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2030.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_ABA35CD8BB29-1.jpeg" alt="IMG_ABA35CD8BB29-1.jpeg"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_C0C6104B573D-1.jpeg" alt="IMG_C0C6104B573D-1.jpeg"></p>
+<p><strong>Rules originating from the same itemset have identical support but can have different confidence.</strong></p>
+<p><strong>If the itemset is infrequent, then all six candidate rules can be pruned immediately without computing their confidence values.</strong></p>
+<hr>
+<h3 id="association-rule-mining-task"><strong>Association Rule Mining Task</strong></h3>
+<p>Association rule mining is a key technique in data mining, often used in market basket analysis to discover relationships between items in transactional data. The process is typically divided into two main ste</p>
+<hr>
+<p><strong>Step 1: Frequent Itemset Generation</strong></p>
+<ul>
+<li>Generate all itemsets that have <strong>support ≥ minsup</strong> (minimum support threshold).</li>
+<li>These itemsets occur frequently enough in the transaction database to be considered interesting.</li>
+<li>Example: {Milk, Bread} appears in 3 out of 5 transactions → support = 0.6</li>
+</ul>
+<hr>
+<p><strong>Step 2: Rule Generation</strong></p>
+<ul>
+<li>
+<p>From each frequent itemset, generate rules of the form <strong>X → Y</strong> (where X ∩ Y = ∅).</p>
+</li>
+<li>
+<p>For each rule, calculate <strong>confidence</strong>:</p>
+<p>$\text{confidence}(X \rightarrow Y) = \frac{\sigma(X \cup Y)}{\text{N}(X)}$</p>
+</li>
+<li>
+<p>Retain only rules where <strong>confidence ≥ minconf</strong> (minimum confidence threshold).</p>
+</li>
+<li>
+<p>These are called <strong>strong association rules</strong>.</p>
+</li>
+</ul>
+<hr>
+<p><strong>Brute-Force Approach (Inefficient Baseline)</strong></p>
+<ol>
+<li>List all possible association rules from all itemsets.</li>
+<li>Compute the support and confidence for each rule.</li>
+<li>Prune any rules that fail to meet the <strong>minsup</strong> or <strong>minconf</strong> thresholds.</li>
+</ol>
+<hr>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2031.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2032.png" alt="image.png"></p>
+<h2 id="candidate-generation-fk-1-x-fk-1-k3"><strong>Candidate Generation: Fk-1 x Fk-1 (k≥3)</strong></h2>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2033.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/IMG_F9243C484116-1.jpeg" alt="IMG_F9243C484116-1.jpeg"></p>
+<p><strong>Before rule generation, confidence is not considered!!</strong></p>
+<h2 id="rule-generation">Rule Generation</h2>
+<p><strong>After frequent item-set generation completed, the support is already guaranteed.</strong></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2034.png" alt="image.png"></p>
+<h3 id="rule-generation-confidence-and-anti-monotonicity"><strong>Rule Generation: Confidence and Anti-Monotonicity</strong></h3>
+<p>When generating association rules from frequent itemsets, confidence is used to measure the strength of a rule. Understanding how confidence behaves with respect to the rule structure is critical for pruning and efficiency.</p>
+<hr>
+<h3 id="confidence-is-not-anti-monotonic-in-general"><strong>Confidence Is Not Anti-Monotonic in General</strong></h3>
+<ul>
+<li>
+<p>In general, confidence <strong>does not follow</strong> the anti-monotone property with respect to the left-hand side (LHS) of a rule.</p>
+</li>
+<li>
+<p>Example:</p>
+<p>$\text{conf}(ABC \rightarrow D) \text{ may be greater or smaller than } \text{conf}(AB \rightarrow D)$</p>
+</li>
+<li>
+<p>Therefore, we <strong>cannot prune</strong> rules just because a shorter LHS has low confidence.</p>
+</li>
+</ul>
+<hr>
+<h3 id="but-confidence-is-anti-monotonic-within-the-same-frequent-itemset"><strong>But Confidence Is Anti-Monotonic Within the Same Frequent Itemset</strong></h3>
+<ul>
+<li>
+<p>If we fix a frequent itemset L, and generate rules of the form:</p>
+<p>$f \rightarrow L - f$</p>
+<p>then confidence <strong>decreases</strong> as the right-hand side (RHS) becomes larger.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>
+<p>If $L = {A, B, C, D},$ then:</p>
+<p>$\text{conf}(ABC \rightarrow D) \geq \text{conf}(AB \rightarrow CD) \geq \text{conf}(A \rightarrow BCD$)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>This is known as the <strong>anti-monotone property of confidence with respect to the size of the RHS</strong>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="why-it-matters-1"><strong>Why It Matters</strong></h3>
+<ul>
+<li>This anti-monotonicity allows <strong>efficient pruning</strong> during rule generation:
+<ul>
+<li>If a rule with RHS = Y is not strong, then <strong>any rule with RHS ⊃ Y</strong> can be safely discarded.</li>
+</ul>
+</li>
+<li>Helps reduce the number of confidence checks needed.</li>
+</ul>
+<hr>
+<h1 id="deep-learnig">Deep Learnig</h1>
+<h3 id="why-deep-network-instead-of-fat-network"><strong>Why deep network instead of fat network?</strong></h3>
+<p><strong>Stronger Expressive Power:</strong> Deep networks apply multiple layers of nonlinear transformations, allowing them to model <strong>complex and abstract relationships</strong> in data that shallow networks cannot easily capture — even if made wider.</p>
+<p><strong>Efficiency in Parameter Use:</strong> Although a single hidden layer network (fat network) can theoretically approximate any function (Universal Approximation Theorem), it may require an <strong>exponentially large number of neurons</strong>, making it computationally expensive and inefficient.</p>
+<p><strong>Better Generalization:</strong> Deep architectures can learn <strong>hierarchical features</strong> (e.g., edges → shapes → objects), which improves their ability to generalize to new, unseen data. Shallow networks often fail to capture such levels of abstraction.</p>
+<blockquote>
+<p>The slides mention:</p>
+<p><em>“Deep networks achieve lossless transfer of information by implicitly transferring information, reducing human bias and improving generalization.”</em></p>
+</blockquote>
+<p><strong>Simplified End-to-End Learning:</strong> Deep networks can learn directly from raw input data, minimizing the need for <strong>manual feature engineering</strong>. In contrast, shallow networks often require significant pre-processing or domain-specific feature design.</p>
+<p><strong>Scalability with Big Data:</strong> Deep models can leverage large datasets more effectively by <strong>automatically extracting statistical patterns</strong> in the data, whereas shallow networks tend to saturate quickly and underfit complex distributions.</p>
+<p><strong>In Summary:</strong></p>
+<blockquote>
+<p>Deep networks outperform fat ones by learning layered feature representations, using parameters more efficiently, generalizing better, and achieving state-of-the-art performance in complex tasks.</p>
+</blockquote>
+<h2 id="nn-basic">NN basic</h2>
+<h3 id="activation-function">Activation function</h3>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2035.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2036.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2037.png" alt="image.png"></p>
+<p><img src="Data%20Mining%2020fd16cf8c088006b2b4f32b0a2fb798/image%2038.png" alt="image.png"></p>
+<h2 id="cnn">CNN</h2>
+<h2 id="rnn">RNN</h2>
+<h2 id="llm">LLM</h2>
+<h3 id="comparison-one-hot-encoding-vs-distributed-representation"><strong>🔍 Comparison: One-hot Encoding vs Distributed Representation</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Aspect</strong></th>
+<th><strong>One-hot Encoding</strong></th>
+<th><strong>Distributed Representation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Definition</strong></td>
+<td>A sparse binary vector with only one dimension set to 1.</td>
+<td>A dense, real-valued vector that captures word semantics.</td>
+</tr>
+<tr>
+<td><strong>Dimensionality</strong></td>
+<td>High (equals vocabulary size).</td>
+<td>Fixed and low (e.g., 100–300).</td>
+</tr>
+<tr>
+<td><strong>Semantic Capacity</strong></td>
+<td>No semantic information encoded.</td>
+<td>Captures similarity between words (e.g., “cat” and “dog” are close).</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Poor – grows with vocabulary size.</td>
+<td>Good – constant size regardless of vocabulary.</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>“猫” = [1, 0, 0, 0, 0, 0]</td>
+<td>“猫” ≈ [0.2, 0.6, 0.1, 0.7, 0.1]</td>
+</tr>
+<tr>
+<td><strong>Computation</strong></td>
+<td>Simple to create, no training needed.</td>
+<td>Requires training (e.g., Word2Vec, GloVe, BERT).</td>
+</tr>
+<tr>
+<td><strong>Storage Cost</strong></td>
+<td>High memory usage.</td>
+<td>Low memory footprint.</td>
+</tr>
+<tr>
+<td><strong>Interpretability</strong></td>
+<td>Easy to understand, purely symbolic.</td>
+<td>Hard to interpret directly, but powerful.</td>
+</tr>
+<tr>
+<td><strong>Context Sensitivity</strong></td>
+<td>No — static and context-free.</td>
+<td>Can be static (Word2Vec) or contextual (e.g., BERT).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One-hot Encoding</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple and intuitive.</li>
+<li>No training required.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Cannot express semantic similarity or meaning.</li>
+<li>Extremely sparse and memory-inefficient.</li>
+<li>Poor performance in most NLP tasks.</li>
+</ul>
+<p><strong>Distributed Representation</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Captures rich semantic and syntactic information.</li>
+<li>Compact and computationally efficient.</li>
+<li>Crucial for modern NLP models (e.g., Transformers, BERT).</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Requires pretraining or embedding models.</li>
+<li>Less interpretable (vector values don’t have explicit meaning).</li>
+<li>Sensitive to training data quality.</li>
+</ul>
+<h1 id="data-security-and-privacy">Data security and privacy</h1>
+ 
+  </section>
+  
+</main>
+
+
+    <footer><p>&copy; 2025 <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a> Powered by <a href="https://gothugo.io">Hugo</a> & <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a></p>
+
+<script src="/js/main.js"></script>
+<script>
+  var prevScrollPos = window.pageYOffset;
+  var checkBox = document.getElementById("overlay-input");
+
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.style.display = "flex";
+    } else {
+      header.style.display = "none";
+      checkBox.checked = false;
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
+  
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand("copy");
+        copyingDone();
+      } catch (e) {}
+      selection.removeRange(range);
+    });
+
+if (container.classList.contains("highlight")) {
+
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+</footer>
+  </body>
+</html>
