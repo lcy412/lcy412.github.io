@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  Data Mining | Chenyang‘s page
+</title>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['@@', '@@']],  
+      inlineMath: [['@', '@']]                  
+    }
+  };
+</script>
+
+
+    
+  </head>
+  <body>
+    <header>
+<nav class="navbar">
+  <a href="/">
+    
+    <p class="logo">Saral</p>
+  </a>
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+
+    <li>
+      <a href="/">Home</a>
+    </li>
+
+    <li>
+      <a href="/posts/">Posts</a>
+    </li>
+
+    <li>
+      <a href="/about/">About</a>
+    </li>
+
+    <li>
+      <a href="/contact/">Contact</a>
+    </li>
+  
+      <li><button id="mode-toggle">☀️</button></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+    
+<main>
+   
+
+<section class="posts-section">
+  <section class="tags">
+    <div>
+       
+      <span>
+        <a href="https://lcy412.github.io/tags/ai-law/">ai law</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/cumcm/">cumcm</a>
+      </span>
+        
+      <span class="active_tag">
+        <a href="https://lcy412.github.io/tags/data-mining/">data mining</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/deep-learning/">deep learning</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/digital-circuit-design/">digital circuit design</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/machine-learning/">machine learning</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/mathematical-modeling/">mathematical modeling</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/sampling/">sampling</a>
+      </span>
+        
+      <span>
+        <a href="https://lcy412.github.io/tags/survival-guide/">survival guide</a>
+      </span>
+       
+    </div>
+  </section>
+
+  <div> <span class="post-element">
+  <a href="/posts/data_mining_note/">
+    <h2>Data Mining Review Note</h2>
+     
+    <time datetime="2025-06-25T00:00:00&#43;00:00">June 25, 2025</time>
+    <p>Introduction I made this material as a final review note for QMUL-BUPT Module BBU6504: Data Mining. It covers key points.
+Note Some parts of material are adapted from the BBU6504 lecture slides and is intended for personal study and educational use only.
+Download Block3 Note.pdf</p>
+  </a>
+</span>
+ </div>
+</section>
+ 
+</main>
+
+
+    <footer><p>&copy; 2025 <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a> Powered by <a href="https://gothugo.io">Hugo</a> & <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a></p>
+
+<script src="/js/main.js"></script>
+<script>
+  var prevScrollPos = window.pageYOffset;
+  var checkBox = document.getElementById("overlay-input");
+
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.style.display = "flex";
+    } else {
+      header.style.display = "none";
+      checkBox.checked = false;
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
+  
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand("copy");
+        copyingDone();
+      } catch (e) {}
+      selection.removeRange(range);
+    });
+
+if (container.classList.contains("highlight")) {
+
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+</footer>
+  </body>
+</html>
