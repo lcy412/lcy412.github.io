@@ -10,9 +10,9 @@
     <atom:link href="https://lcy412.github.io/tags/digital-circuit-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Circuit Design Final Revision Tutorial</title>
-      <link>https://lcy412.github.io/posts/rea/</link>
+      <link>https://lcy412.github.io/revision-notes/rea/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://lcy412.github.io/posts/rea/</guid>
+      <guid>https://lcy412.github.io/revision-notes/rea/</guid>
       <description>Introduction I made this material as a final review note for QMUL Module EBU4202: Digital Circuit Design. It covers key points and some most difficult parts from Teaching Block1——Block3. Block4 is not included due to time limit.&#xA;Tutorial I hosted and ran the tutorial on June 11, 2024 from 7:30 PM to 9:30 PM to help BUPT-QMUL students review the course Digital Circuit Design. The tutorial was for students from two majors, which are Intelligence Science and Technology and Electronic Information Engineering.</description>
     </item>
   </channel>
