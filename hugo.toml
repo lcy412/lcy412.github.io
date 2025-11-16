@@ -36,9 +36,9 @@ pygmentsStyle = "doom-one"
     url = "/about/"
     weight = 40
   [[menu.main]]
-    name = "Posts"
+    name = "Revision Notes"
     pre = "pen-tool"
-    url = "/posts/"
+    url = "/revision notes/"
     weight = 20
 
   [[menu.main]]

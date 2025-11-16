@@ -11,12 +11,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/themes/saral" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/themes/saral" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/saral" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -30,22 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lichenyang/Documents/blog&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "gh-pages",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lichenyang/Documents/blog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -99,6 +115,19 @@
       <workItem from="1748492031595" duration="379000" />
       <workItem from="1748492435250" duration="67000" />
       <workItem from="1748492504100" duration="823000" />
+      <workItem from="1749701985423" duration="1014000" />
+      <workItem from="1749739864937" duration="898000" />
+      <workItem from="1749823104149" duration="89000" />
+      <workItem from="1749823196484" duration="468000" />
+      <workItem from="1750499030892" duration="66000" />
+      <workItem from="1750828142873" duration="328000" />
+      <workItem from="1750828474684" duration="39000" />
+      <workItem from="1751855846165" duration="1225000" />
+      <workItem from="1751857075336" duration="63000" />
+      <workItem from="1751857141119" duration="610000" />
+      <workItem from="1762851603824" duration="1000" />
+      <workItem from="1763090735888" duration="764000" />
+      <workItem from="1763129967623" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="commmit">
       <option name="closed" value="true" />
@@ -116,7 +145,31 @@
       <option name="project" value="LOCAL" />
       <updated>1748492797425</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commmit">
+      <option name="closed" value="true" />
+      <created>1749702283064</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749702283064</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commmit">
+      <option name="closed" value="true" />
+      <created>1749740013385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749740013385</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commmit">
+      <option name="closed" value="true" />
+      <created>1749740199695</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749740199695</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

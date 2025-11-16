@@ -12,4 +12,4 @@ I participated in the 2024 China Undergraduate Mathematical Contest in Modeling(
 
 Our team's [winning paper](../../论文.pdf) is attached here for reference.
 
-If you want to know more about this paper and Mathematicl Modeling, you can visit the website of Haitong Lan(https://noisierier.github.io/p/my-mathematical-modeling/), one of my teammates.
+You can visit the website of Haitong Lan(https://haitonglan.github.io/), one of my teammates, to get more information.
