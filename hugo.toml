@@ -38,7 +38,7 @@ pygmentsStyle = "doom-one"
   [[menu.main]]
     name = "Revision Notes"
     pre = "pen-tool"
-    url = "/revision notes/"
+    url = "/revision-notes/"
     weight = 20
 
   [[menu.main]]
